@@ -1,0 +1,92 @@
+.admin-table-container {
+  width: 100%;
+  overflow-x: auto !important;
+  overflow-y: visible;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+  -webkit-overflow-scrolling: touch;
+}
+
+.admin-table-container::-webkit-scrollbar {
+  height: 8px;
+}
+
+.admin-table-container::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 4px;
+}
+
+.admin-table-container::-webkit-scrollbar-thumb {
+  background: #c1c1c1;
+  border-radius: 4px;
+}
+
+.admin-table-container::-webkit-scrollbar-thumb:hover {
+  background: #a8a8a8;
+}
+
+/* Override layout constraints for admin panel */
+.wrapper,
+.wrapper--top-nav,
+.wrapper-box,
+.content {
+  overflow-x: visible !important;
+  max-width: none !important;
+}
+
+.admin-table {
+  width: 100%;
+  min-width: 900px !important;
+  border-collapse: collapse;
+  table-layout: fixed;
+}
+
+.admin-table th,
+.admin-table td {
+  padding: 12px 8px;
+  text-align: center;
+  border-bottom: 1px solid #e5e7eb;
+  white-space: nowrap;
+}
+
+.admin-table th {
+  background-color: #f9fafb;
+  font-weight: 600;
+  color: #374151;
+}
+
+.admin-table tbody tr:hover {
+  background-color: #f9fafb;
+}
+
+.admin-table .col-id {
+  width: 60px;
+}
+
+.admin-table .col-image {
+  width: 80px;
+}
+
+.admin-table .col-title {
+  min-width: 200px;
+}
+
+.admin-table .col-path {
+  min-width: 150px;
+}
+
+.admin-table .col-industries {
+  min-width: 250px;
+  max-width: 300px;
+}
+
+.admin-table .col-action {
+  width: 100px;
+}
+
+.admin-table .industries-cell {
+  max-width: 300px;
+  word-wrap: break-word;
+  white-space: normal;
+}

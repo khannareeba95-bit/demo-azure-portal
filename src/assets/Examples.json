@@ -1,0 +1,313 @@
+{
+  "projects": [
+    {
+      "title": "IntelliDoc",
+      "category": ["OCR", "NLP", "AI Workflow Automation"],
+      "path": "/idp",
+      "description": "IntelliDoc is an AI-powered document processing platform that extracts, reviews, and analyzes information from any document type like IDs, forms, contracts, or reports. With intelligent automation, it highlights key data, flags errors, and scales effortlessly from a few files to enterprise volumes. By turning unstructured content into actionable insights, IntelliDoc streamlines workflows, reduces manual effort, and drives faster, data-driven decisions.",
+      "tech_stack": "Amazon SageMaker, Amazon ECR, Amazon EC2, Amazon Translate, Amazon Bedrock",
+      "thumbnail_image": "",
+      "youtube_link": "",
+      "deploy_infra": true,
+      "industry": [
+        {
+          
+          "industry_name": "Healthcare/HealthTech",
+          "problem_statement": "Healthcare providers struggle with manual processing of patient records, diagnostic reports, and insurance claims—leading to delays, errors, and compliance risks.",
+          "solution": "IntelliDoc automates the ingestion, classification, and extraction of critical patient and insurance data across diverse document types. It ensures accuracy, speeds up claims processing, supports regulatory compliance (HIPAA, HL7), and enables clinicians and administrators to focus on delivering quality care rather than paperwork."
+        },
+        {
+          "industry_name": "BFSI/FSI/FinTech",
+          "problem_statement": "Financial institutions face high operational costs and compliance risks due to manual handling of KYC, loan applications, and regulatory documentation.",
+          "solution": "IntelliDoc enables end-to-end automation of document-intensive processes including KYC verification, credit risk assessment, and compliance reporting. With built-in data validation, anomaly detection, and audit trails, it improves turnaround times, reduces fraud exposure, and ensures adherence to global regulatory standards such as AML, Basel III, and GDPR."
+        }
+      ]
+    },
+    {
+      "title": "Vistora",
+      "category": ["Video Generation"],
+      "path": "/ai-content-video",
+      "description": "Vistora is a smart video creation platform that helps brands turn ideas into engaging marketing stories, fast, simple, and on-brand. Built with safety at its core, it ensures high-quality, consistent, and responsible content for campaigns, promotions, and social media.",
+      "tech_stack": "Amazon Nova, AWS Lambda, Amazon S3",
+      "thumbnail_image": "",
+      "youtube_link": "",
+      "deploy_infra": false,
+      "industry": [
+        {
+          "industry_name": "Media & Entertainment",
+          "problem_statement": "Brands struggle to create engaging marketing videos without the need for complex tools or long production cycles. They also face challenges in maintaining consistency and quality across different platforms.",
+          "solution": "Vistora is a smart, intuitive platform that empowers brands to create captivating marketing videos with ease. Designed for modern businesses, it transforms simple ideas into visually compelling stories that are perfect for campaigns, promotions, and social media. With Vistora, there's no need for complex tools or long production cycles. Every video reflects your brand's unique voice while maintaining consistency and quality. Importantly, Vistora is built with safety at its core. It includes intelligent safeguards that prevent the generation of explicit or inappropriate content, making it a reliable choice for businesses that value brand integrity and audience trust. Whether you're launching a product, telling your brand story, or boosting engagement, Vistora helps you do it faster, better, and responsibly. Your creative vision. Our intelligent storytelling engine."
+        },
+        {
+          "industry_name": "E-Commerce",
+          "problem_statement": "E-commerce businesses struggle to create engaging marketing videos without the need for complex tools or long production cycles. They also face challenges in maintaining consistency and quality across different platforms.",
+          "solution": "Vistora is a smart, intuitive platform that empowers brands to create captivating marketing videos with ease. Designed for modern businesses, it transforms simple ideas into visually compelling stories that are perfect for campaigns, promotions, and social media. With Vistora, there's no need for complex tools or long production cycles. Every video reflects your brand's unique voice while maintaining consistency and quality. Importantly, Vistora is built with safety at its core. It includes intelligent safeguards that prevent the generation of explicit or inappropriate content, making it a reliable choice for businesses that value brand integrity and audience trust. Whether you're launching a product, telling your brand story, or boosting engagement, Vistora helps you do it faster, better, and responsibly. Your creative vision. Our intelligent storytelling engine."
+        }
+      ]
+    },
+    {
+      "title": "VendorIQ",
+      "category": ["NLP", "Chatbot", "Analytics", "Knowledge Retrieval"],
+      "path": "/pharmabot",
+      "description": "VendorIQ streamlines supplier cost management by converting complex vendor documents into a structured, searchable knowledge base. It gives procurement and finance teams instant insights into rates, suppliers, and trends, enabling faster decisions, stronger negotiations, and smarter cost control.",
+      "tech_stack": "Amazon Bedrock, Amazon Aurora Postgres, Amazon S3, Amazon DynamoDB, Amazon Lambda, Amazon APIGateway",
+      "thumbnail_image": "",
+      "youtube_link": "",
+      "deploy_infra": true,
+      "industry": [
+        {
+          "industry_name": "Healthcare/HealthTech",
+          "problem_statement": "Healthcare organizations struggle with managing complex supplier relationships for medical equipment, pharmaceuticals, and supplies, leading to cost overruns and compliance risks.",
+          "solution": "VendorIQ streamlines healthcare procurement by centralizing supplier cost data, enabling better price negotiations for medical supplies, ensuring regulatory compliance, and optimizing inventory management to reduce costs while maintaining quality patient care."
+        },
+        {
+          "industry_name": "E-Commerce",
+          "problem_statement": "E-commerce businesses face challenges in managing multiple suppliers, comparing costs across vendors, and maintaining competitive pricing while ensuring product quality and timely delivery.",
+          "solution": "VendorIQ empowers e-commerce companies to optimize their supply chain by providing real-time cost analysis, supplier performance tracking, and automated vendor comparison tools that enable better procurement decisions and improved profit margins."
+        }
+      ]
+    },
+    {
+      "title": "GenAI Docs",
+      "category": ["NLP", "OCR", "Chatbot"],
+      "path": "/genai/doc",
+      "description": "GenAI Docs is an intelligent automation platform that streamlines document creation and analysis. It transforms lengthy reports and policies into clear summaries and insights, enables prompt-based or template-driven generation, and supports chapter-wise breakdowns, assessments, and real-time collaboration. By reducing manual effort, it delivers smarter, faster, and more impactful documentation.",
+      "tech_stack": "Amazon S3, Amazon Bedrock (Model: Anthropic Claude v3 Sonnet)",
+      "thumbnail_image": "",
+      "youtube_link": "",
+      "deploy_infra": false,
+      "industry": [
+        {
+          "industry_name": "IT/ITEs",
+          "problem_statement": "Large IT organizations face challenges in consistently delivering onboarding programs, compliance sessions, and process training to globally distributed teams.",
+          "solution": "GenAI Docs transforms lengthy training manuals and policy documents into concise, interactive learning modules with auto-generated quizzes and summaries. This improves engagement, ensures standardized learning across locations, and reduces the effort required to update and deliver training content at scale."
+        },
+        {
+          "industry_name": "EdTech/Education",
+          "problem_statement": "Educators and institutions spend significant time preparing study materials, lesson plans, and assessments from lengthy academic resources.",
+          "solution": "GenAI Docs auto-generates structured lesson notes, summaries, and quizzes from textbooks, research papers, and lecture transcripts. It helps educators deliver high-quality content faster while ensuring students get simplified, well-organized learning material for better engagement."
+        }
+      ]
+    },
+    {
+      "title": "QUESTA",
+      "category": ["NLP", "OCR", "Chatbot", "Speech-to-Text", "Knowledge Retrieval"],
+      "path": "/genai/videos",
+      "description": "QUESTA is an AI-powered assessment platform that helps educators instantly generate standards-aligned, multilingual evaluations from lesson plans or curricula. With Bloom's taxonomy-based questions in text, audio, and video formats, plus easy customization and deployment, QUESTA saves time, enhances engagement, and supports inclusive, impactful learning.",
+      "tech_stack": "Amazon Nova, AWS Lambda, Amazon S3",
+      "thumbnail_image": "",
+      "youtube_link": "",
+      "deploy_infra": false,
+      "industry": [
+        {
+          "industry_name": "EdTech/Education",
+          "problem_statement": "Educators spend excessive time manually creating question papers and assessments that align with curriculum standards, which delays timely evaluations.",
+          "solution": "QUESTA automates the generation of curriculum-aligned assessments from lesson plans and textbooks. It reduces manual effort, ensures comprehensive syllabus coverage, and provides diverse question formats including MCQs, descriptive, and video-based questions for inclusive learning."
+        },
+        {
+          "industry_name": "Media & Entertainment",
+          "problem_statement": "Content creators and training organizations in media need to quickly develop engaging assessments and quizzes for audience engagement, certification programs, and interactive content delivery.",
+          "solution": "QUESTA enables media companies to rapidly create interactive assessments from scripts, training materials, and content outlines, supporting multimedia formats and multiple languages to enhance audience engagement and deliver effective training programs."
+        }
+      ]
+    },
+    {
+      "title": "Generative AI Resumes",
+      "category": ["NLP", "OCR", "Chatbot"],
+      "path": "/genai/resumes",
+      "description": "Generative AI Resumes is an intelligent platform that transforms static resumes into dynamic insights for faster, more precise hiring. It analyzes qualifications, suggests role matches, enables interactive Q&A, and streamlines screening with document previews and automated job mapping. By reducing bias and manual effort, it empowers smarter decisions and quicker talent acquisition.",
+      "tech_stack": "Amazon Transcribe, Amazon Bedrock (Model: Anthropic Claude v3 Sonnet)",
+      "thumbnail_image": "",
+      "youtube_link": "",
+      "deploy_infra": false,
+      "industry": [
+        {
+          "industry_name": "EdTech/Education",
+          "problem_statement": "Educational institutions and training organizations spend significant time evaluating candidate resumes manually, which can delay placements and reduce hiring accuracy.",
+          "solution": "Generative AI Resumes automates resume screening and career matching by providing AI-powered insights, highlighting key skills, and delivering role-fit suggestions, thereby saving time and improving placement quality."
+        },
+        {
+          "industry_name": "IT/ITEs",
+          "problem_statement": "Recruiters in IT/ITEs struggle with high volumes of resumes, inconsistent candidate evaluations, and delayed hiring decisions due to manual resume processing.",
+          "solution": "Generative AI Resumes enables IT/ITES hiring teams to efficiently analyze large volumes of resumes, extract critical information, reduce bias, and make faster, more accurate hiring decisions through AI-driven recommendations and interactive Q&A features."
+        }
+      ]
+    },
+    {
+      "title": "Data Orchestration",
+      "category": ["NLP", "OCR", "Chatbot", "Speech-to-Text", "Knowledge Retrieval"],
+      "path": "https://datasymphonys.movetoaws.com",
+      "description": "Data Orchestration combines Files Knowledge Saathi (FKS) and Bot Knowledge Saathi (BKS) to make enterprise knowledge easily accessible. FKS organizes unstructured content into a searchable AI-backed knowledge base, while BKS provides conversational access, guides processes, and triggers workflows. With security and audit features, it ensures faster, smarter, and more efficient decision-making.",
+      "tech_stack": "Amazon DynamoDB, Amazon Comprehend, Amazon Rekognition, Amazon Bedrock (Model: Anthropic Claude v3 Sonnet), Amazon Kendra",
+      "thumbnail_image": "",
+      "youtube_link": "",
+      "deploy_infra": false,
+      "industry": [
+        {
+          "industry_name": "BFSI/FinTech",
+          "problem_statement": "Financial institutions struggle with scattered policies, reports, and regulatory documents, slowing down decision-making, compliance reporting, and customer service.",
+          "solution": "Data Orchestration centralizes all financial content into an AI-powered, searchable knowledge hub with conversational access across multiple channels. This empowers teams to make faster, smarter decisions, streamline compliance, and reduce operational bottlenecks."
+        },
+        {
+          "industry_name": "Healthcare/HealthTech",
+          "problem_statement": "Healthcare organizations face delays in accessing critical medical records, research papers, and policy documents, impacting patient care and operational efficiency.",
+          "solution": "Data Orchestration transforms healthcare documentation into an intelligent, easily accessible system via chat and voice interfaces. Teams can quickly retrieve insights, automate workflows, and make informed clinical decisions while ensuring secure, compliant access."
+        }
+      ]
+    },
+    {
+      "title": "ElevateSEO",
+      "category": ["NLP"],
+      "path": "/seo-optimization",
+      "description": "ElevateSEO is an AI-powered tool that automatically generates search-friendly content and keyword tags from simple product or service inputs. It creates relevant summaries and multi-word tags to boost online visibility and search rankings. By automating SEO, it reduces costs, speeds time-to-market, and scales across large catalogs, driving higher organic traffic, engagement, and conversions for efficient digital growth.",
+      "tech_stack": "Amazon Nova Pro, Amazon API Gateway, AWS Lambda, Amazon S3, Amazon DynamoDB",
+      "thumbnail_image": "",
+      "youtube_link": "",
+      "deploy_infra": false,
+      "industry": [
+        {
+          "industry_name": "E-Commerce",
+          "problem_statement": "E-commerce businesses struggle to manually create SEO-friendly product descriptions and tags for large catalogs, leading to lower search visibility, slower updates, and missed revenue opportunities.",
+          "solution": "ElevateSEO automates the generation of optimized content and keyword tags, enabling faster product listing updates, higher search rankings, and increased organic traffic. This reduces manual effort, accelerates time-to-market, and boosts overall online sales performance."
+        },
+        {
+          "industry_name": "Media & Entertainment",
+          "problem_statement": "Content creators and media platforms face challenges in ensuring their articles, videos, and digital assets are discoverable online, often requiring constant SEO monitoring and optimization.",
+          "solution": "ElevateSEO leverages AI to automatically create SEO-optimized summaries and keyword tags for media content, improving online visibility, engagement, and discoverability. This helps media teams focus on creativity while maximizing audience reach and digital impact."
+        }
+      ]
+    },
+    {
+      "title": "SOW Automation",
+      "category": ["NLP", "Analytics", "AI Workflow Automation"],
+      "path": "https://d1ev4685a7dj0s.cloudfront.net/",
+      "description": "SOW Automation is an AI platform that streamlines the creation of high-quality Statements of Work and project questionnaires. It transforms user inputs into structured, professional documents, integrating diagrams, branding, and references. With a guided dashboard, teams can quickly produce accurate, client-ready deliverables, allowing consultants and project managers to focus on strategy instead of paperwork.",
+      "tech_stack": "Amazon Bedrock (Model: Anthropic Claude v3.5 Sonnet)",
+      "thumbnail_image": "",
+      "youtube_link": "",
+      "deploy_infra": false,
+      "industry": [
+        {
+          "industry_name": "IT/ITEs",
+          "problem_statement": "IT and consulting teams spend excessive time drafting SOWs and project questionnaires manually, reducing time available for client engagement and solution planning.",
+          "solution": "SOW Automation transforms project inputs into client-ready SOWs and questionnaires quickly and accurately, reducing manual effort and allowing IT/ITES teams to focus on strategy, client discussions, and solution delivery."
+        },
+        {
+          "industry_name": "Manufacturing & Energy",
+          "problem_statement": "Manufacturing and energy companies face challenges in producing detailed project documentation consistently, leading to errors, delays, and misaligned expectations with stakeholders.",
+          "solution": "SOW Automation automates the creation of structured project documents and questionnaires, ensuring professional-grade, consistent outputs that save time, reduce errors, and enhance stakeholder communication."
+        }
+      ]
+    },
+    {
+      "title": "MINIQ",
+      "category": ["NLP", "OCR", "Chatbot", "Knowledge Retrieval"],
+      "path": "https://d21f3o8hvyitp3.cloudfront.net",
+      "description": "MINIQ is an AI platform that turns complex content from documents, meetings, and videos into clear, actionable insights. Users can upload or connect files and get precise answers, summaries, and key highlights in plain English. Supporting multiple formats, it makes knowledge searchable and accessible, helping teams make faster decisions, stay aligned, and retain valuable information.",
+      "tech_stack": "Amazon Bedrock (Model: Anthropic Claude v3 Sonnet)",
+      "thumbnail_image": "",
+      "youtube_link": "",
+      "deploy_infra": false,
+      "industry": [
+        {
+          "industry_name": "IT/ITEs",
+          "problem_statement": "IT service providers spend days manually reviewing RFPs, EOIs, and compliance checklists, increasing bid turnaround time and risk of missing key requirements.",
+          "solution": "MINIQ automatically summarizes RFPs, extracts eligibility criteria, compliance clauses, and technical requirements, enabling faster bid/no-bid decisions and improving proposal quality."
+        },
+        {
+          "industry_name": "NPO/NGO",
+          "problem_statement": "Non-profits struggle with time-consuming grant applications and donor reporting requirements, leading to missed funding opportunities and compliance risks.",
+          "solution": "MINIQ summarizes grant eligibility, reporting formats, and funding requirements, enabling NGOs to respond quickly to opportunities and maintain compliance with donor guidelines."
+        }
+      ]
+    },
+    {
+      "title": "Arogya Mitra",
+      "category": ["NLP", "Agentic AI", "Chatbot", "Analytics", "AI Workflow Automation"],
+      "path": "/arogya-mitra",
+      "description": "Arogya Mitra is an AI healthcare assistant that simplifies access to medical care across India. Available 24/7 on WhatsApp in multiple languages, it helps patients book appointments, find the right specialists, and receive reminders and guidance. For hospitals, it reduces manual scheduling, minimizes no-shows, and optimizes resources, making healthcare more accessible and efficient.",
+      "tech_stack": "Amazon Bedrock (Agents, Flow), AWS Lambda, Amazon RDS, Amazon DynamoDB",
+      "thumbnail_image": "",
+      "youtube_link": "",
+      "deploy_infra": false,
+      "industry": [
+        {
+          "industry_name": "Healthcare/HealthTech",
+          "problem_statement": "Patients often face delays and confusion when booking appointments or finding the right doctor, leading to missed consultations and poor treatment continuity.",
+          "solution": "Arogya Mitra enables instant doctor appointment booking, symptom-based specialist suggestions, and automated reminders through WhatsApp, improving access to care and reducing no-shows."
+        },
+        {
+          "industry_name": "NPO/NGO",
+          "problem_statement": "NGOs struggle to maintain consistent engagement with communities, volunteers, and donors at scale.",
+          "solution": "Arogya Mitra provides an automated chat channel for awareness campaigns, volunteer onboarding, and donation facilitation, increasing reach and reducing operational overhead."
+        }
+      ]
+    },
+    {
+      "title": "HiRE",
+      "category": ["NLP", "Video Analytics", "Fraud Detection", "Analytics", "AI Workflow Automation"],
+      "path": "/hire",
+      "description": "HiRE is an AI hiring assistant that streamlines recruitment by analyzing candidate profiles, ranking them by fit, and providing tailored interview questions. Its voice-enabled bot guides interviews and records responses, ensuring a consistent experience. By reducing bias, saving time, and improving decision-making, HiRE helps HR teams focus on building relationships and securing top talent efficiently.",
+      "tech_stack": "Amazon Bedrock (Agents, Flow), AWS Lambda, Amazon RDS, Amazon DynamoDB",
+      "thumbnail_image": "",
+      "youtube_link": "",
+      "deploy_infra": false,
+      "industry": [
+        {
+          "industry_name": "EdTech/Education",
+          "problem_statement": "Educational institutions face challenges in quickly hiring qualified teachers, trainers, and academic staff during peak admission seasons.",
+          "solution": "HiRE automates resume shortlisting, evaluates candidates based on subject expertise, and schedules structured interviews—helping institutions hire top educators faster and ensure uninterrupted learning delivery."
+        },
+        {
+          "industry_name": "IT/ITEs",
+          "problem_statement": "IT companies struggle with high application volumes and long turnaround times for filling niche technology roles, impacting project timelines.",
+          "solution": "HiRE quickly filters resumes using AI-driven skill matching, generates technical interview questions, and helps hiring managers focus only on top candidates, significantly reducing time-to-hire."
+        }
+      ]
+    },
+    {
+      "title": "VOCAL",
+      "category": ["NLP", "Sentiment Analysis", "AI Workflow Automation"],
+      "path": "/rtcca",
+      "description": "VOCAL is an AI conversation intelligence platform that provides real-time analysis of customer calls, offering instant feedback and prompts to improve agent responses. It auto-logs interactions with sentiment scores and insights, helping teams resolve issues faster, personalize service, identify opportunities, and enhance customer satisfaction while giving managers full visibility into performance.",
+      "tech_stack": "Amazon Bedrock (Model: Anthropic Claude v3 Sonnet), Amazon Comprehend, Amazon Transcribe",
+      "thumbnail_image": "",
+      "youtube_link": "",
+      "deploy_infra": false,
+      "industry": [
+        {
+          "industry_name": "E-Commerce",
+          "problem_statement": "Online retailers struggle with inconsistent customer support experiences and missed opportunities for upselling during live calls.",
+          "solution": "VOCAL analyzes customer sentiment in real time, provides live prompts to agents for better engagement, and highlights relevant product recommendations—boosting conversion rates and enhancing customer satisfaction."
+        },
+        {
+          "industry_name": "Telecommunication",
+          "problem_statement": "Telecom providers manage high call volumes and often face long resolution times, leading to customer churn and dissatisfaction.",
+          "solution": "VOCAL surfaces real-time insights into call sentiment and trending issues, enabling faster resolution, reducing escalations, and improving first-call resolution rates."
+        }
+      ]
+    },
+    {
+      "title": "Data Mosaic",
+      "category": ["Analytics", "Observability", "Generative AI"],
+      "path": "/quicksight",
+      "description": "Data Mosaic is a business intelligence platform that turns complex data into interactive, real-time dashboards. With features like natural language queries, drill-down analysis, and dynamic filtering, it delivers instant insights without technical skills. Secure and always up to date, Data Mosaic helps organizations monitor performance, make informed decisions, and drive data-driven growth efficiently.",
+      "tech_stack": "AWS services used",
+      "thumbnail_image": "",
+      "youtube_link": "",
+      "deploy_infra": false,
+      "industry": [
+        {
+          "industry_name": "BFSI/FSI/FinTech",
+          "problem_statement": "Financial institutions struggle with fragmented data sources, manual reporting, and delayed insights that impact decision-making.",
+          "solution": "Data Mosaic unifies real-time transaction, compliance, and risk data into secure dashboards—empowering executives to monitor portfolio performance, detect fraud patterns, and stay ahead of regulatory requirements."
+        },
+        {
+          "industry_name": "Healthcare/HealthTech",
+          "problem_statement": "Hospitals and healthtech providers often lack a unified view of patient outcomes, resource utilization, and operational metrics.",
+          "solution": "Data Mosaic aggregates patient care, appointment, and resource data into a single dashboard—helping healthcare administrators optimize capacity planning, improve patient experience, and reduce operational bottlenecks."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,40 @@
+/* Shared scrollbar styles */
+.custom-scroll,
+.custom-scroll-qa,
+.custom-scroll-resume {
+  overflow-y: auto;
+  scrollbar-width: thin; /* For Firefox */
+  scrollbar-color: #3182ce #e2e8f0; /* For Firefox */
+}
+
+.custom-scroll::-webkit-scrollbar,
+.custom-scroll-qa::-webkit-scrollbar,
+.custom-scroll-resume::-webkit-scrollbar {
+  width: 8px;
+}
+
+.custom-scroll::-webkit-scrollbar-thumb,
+.custom-scroll-qa::-webkit-scrollbar-thumb,
+.custom-scroll-resume::-webkit-scrollbar-thumb {
+  background-color: #3182ce;
+  border-radius: 4px;
+}
+
+.custom-scroll::-webkit-scrollbar-track,
+.custom-scroll-qa::-webkit-scrollbar-track,
+.custom-scroll-resume::-webkit-scrollbar-track {
+  background: #e2e8f0;
+}
+
+/* Specific height for different scrollable containers */
+.custom-scroll {
+  max-height: 500px;
+}
+
+.custom-scroll-qa {
+  max-height: 500px;
+}
+
+.custom-scroll-resume {
+  max-height: 300px;
+}

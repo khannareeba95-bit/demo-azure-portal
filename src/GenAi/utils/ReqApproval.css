@@ -1,0 +1,44 @@
+.gen-ai-container {
+  background: url('/genai/assets/GenAI-bg.jpg') center;
+  background-size: cover;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.gen-ai-form {
+  background-color: white;
+  min-width: 680px;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.form-row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-top: 20px;
+}
+
+label {
+  font-weight: bold;
+  margin-right: 10px;
+  width: 150px;
+}
+
+input[type='text'] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+button.submit-button {
+  border: none;
+  padding: 10px;
+  color: white;
+  background-color: #20629b;
+  margin-top: 30px;
+  cursor: pointer;
+}

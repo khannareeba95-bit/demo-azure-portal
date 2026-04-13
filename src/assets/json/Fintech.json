@@ -1,0 +1,24 @@
+{
+  "data": [
+    {
+      "img": "DataOrchestration.png",
+      "title": "Data Orchestration",
+      "path": "https://orchestration.cloudthat.com"
+    },
+    {
+      "img": "Quicksight.png",
+      "title": "QuickSight",
+      "path": "/quicksight"
+    },
+    {
+      "img": "OCR.png",
+      "title": "Intelligent Documents Processing",
+      "path": "/idp"
+    },
+    {
+      "img": "GenAi.png",
+      "title": "Generative AI",
+      "path": "/genai"
+    }
+  ]
+}

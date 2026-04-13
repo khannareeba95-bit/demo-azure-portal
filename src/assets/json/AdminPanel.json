@@ -1,0 +1,32 @@
+{
+  "admindata": [
+    {
+      "title": "Admin Panel",
+      "path": "/adminpanel"
+    },
+    {
+      "title": "NTT",
+      "path": "/ntt"
+    },
+    {
+      "title": "Gen AI Stack",
+      "path": "/hpe"
+    },
+    {
+      "title": "ITC",
+      "path": "/itc"
+    },
+    {
+      "title": "EY",
+      "path": "/ey"
+    },
+    {
+      "title": "Wipro Dashboard",
+      "path": "/ctvoicebot"
+    },
+    {
+      "title": "Knowledge Sathi",
+      "path": "/knowledgesathi"
+    }
+  ]
+}

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Debug localStorage</title>
+</head>
+<body>
+    <h1>localStorage Debug</h1>
+    <div id="output"></div>
+    
+    <script>
+        const output = document.getElementById('output');
+        let html = '<h2>All localStorage keys:</h2>';
+        
+        for (let i = 0; i < localStorage.length; i++) {
+            const key = localStorage.key(i);
+            if (key.startsWith('gif_')) {
+                const value = localStorage.getItem(key);
+                html += `<p><strong>${key}</strong>: ${value ? 'Has data (' + value.length + ' chars)' : 'No data'}</p>`;
+            }
+        }
+        
+        html += '<h2>Specific project checks:</h2>';
+        const projects = ['Intellidoc', 'Arogya_Mitra', 'Elevate_SEO'];
+        const industries = ['Healthcare_HealthTech', 'Healthcare', 'Digital_Marketing'];
+        
+        projects.forEach(project => {
+            industries.forEach(industry => {
+                const key = `gif_${project}_${industry}`;
+                const value = localStorage.getItem(key);
+                html += `<p><strong>${key}</strong>: ${value ? 'EXISTS' : 'NOT FOUND'}</p>`;
+            });
+        });
+        
+        output.innerHTML = html;
+    </script>
+</body>
+</html>
