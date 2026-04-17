@@ -24,7 +24,7 @@ const Main = () => {
   async function handleGenerateQuery() {
     setLoading(true);
     try {
-      let response = await fetch("https://f5bwdybhp0.execute-api.ap-south-1.amazonaws.com/dev/", {
+      let response = await fetch(import.meta.env.VITE_SEO_API_URL, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

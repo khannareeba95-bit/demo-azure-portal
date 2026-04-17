@@ -39,7 +39,7 @@ export const MetroPolisDashboard = () => {
       redirect: 'follow',
     };
     try {
-      const response = await fetch('https://zowlvx8au5.execute-api.ap-south-1.amazonaws.com/test', requestOptions);
+      const response = await fetch(import.meta.env.VITE_METROPOLIS_API_URL, requestOptions);
       const data = await response.json();
       //   const data = {
       //     statusCode: 200,
@@ -72,7 +72,7 @@ export const MetroPolisDashboard = () => {
       redirect: 'follow',
     };
     try {
-      const response = await fetch('https://zowlvx8au5.execute-api.ap-south-1.amazonaws.com/test', requestOptions);
+      const response = await fetch(import.meta.env.VITE_METROPOLIS_API_URL, requestOptions);
       const data = await response.json();
       //   return data?.body;
       const embedUrl = data.body; // Assuming the server returns an object with 'embedUrl' property

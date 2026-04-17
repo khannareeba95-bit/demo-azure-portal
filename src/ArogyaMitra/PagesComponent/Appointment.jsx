@@ -23,7 +23,7 @@ function Appointment() {
 
     try {
       const response = await fetch(
-        "https://nl1wxwxyjh.execute-api.ap-south-1.amazonaws.com/dev/",
+        import.meta.env.VITE_AROGYA_API_URL,
         {
           method: "POST",
           headers: {

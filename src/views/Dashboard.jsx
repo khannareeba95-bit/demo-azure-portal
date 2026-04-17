@@ -1,4 +1,4 @@
-import { useCallback, useMemo, useState } from "react";
+import { useCallback, useEffect, useMemo, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { useSearch } from "../Context/SearchContext.jsx";
 import Lucide from "../base-components/lucide/index";
@@ -38,24 +38,38 @@ export const FIXED_INDUSTRIES = [
 // }
 // ─────────────────────────────────────────────────────────────────────────────
 export const PROJECTS = [
-  // Paste your project objects here. Example (uncomment to use):
-  //
-  // {
-  //   id: "intellidoc",
-  //   title: "IntelliDoc",
-  //   industryId: "manufacturing-energy",
-  //   status: "completed",
-  //   path: "/intellidoc",
-  //   gifUrl: "https://your-azure-blob.blob.core.windows.net/gifs/intellidoc.gif",
-  //   youtubeUrl: "https://youtu.be/YOUR_VIDEO_ID",
-  //   techStack: ["OCR", "NLP", "AI Workflow Automation"],
-  //   marketingHeadline: "Keep Production Flowing — No Paper Jams",
-  //   demoOverview: "Optimizes document-heavy supply chain workflows, reducing errors and improving production continuity.",
-  //   problemStatement: "Manual handling of invoices, compliance certificates, and safety reports leads to errors, delayed audits, and supply chain inefficiencies.",
-  //   solution: "IntelliDoc processes procurement, quality, and compliance documents automatically, ensuring accurate data capture and quick approvals.",
-  //   description: "AI Workflow automation extracts invoices, QC forms, and safety logs across supply chains.",
-  //   images: [],
-  // },
+  {
+    id: "intellidoc",
+    title: "IntelliDoc",
+    industryId: "bfsi-fsi-fintech",
+    status: "completed",
+    path: "/intellidoc",
+    gifUrl: "https://demos-cloudthat.s3.ap-south-1.amazonaws.com/IntelliDoc/industry_3_329eccff.gif",
+    youtubeUrl: "https://youtu.be/LvJ0m1ApOWA",
+    techStack: ["OCR", "NLP", "AI Workflow Automation"],
+    marketingHeadline: "Smart docs. Safe banking",
+    demoOverview: "With IntelliDoc, banks and financial institutions can streamline KYC, onboarding, and compliance workflows. This accelerates loan approvals, strengthens fraud detection, and provides complete auditability ensuring faster service delivery and regulatory confidence.",
+    problemStatement: "Financial institutions face high operational costs and compliance risks due to manual handling of KYC, loan applications, and regulatory documentation.",
+    solution: "IntelliDoc enables end-to-end automation of document-intensive processes including KYC verification, credit risk assessment, and compliance reporting. With built-in data validation, anomaly detection, and audit trails, it improves turnaround times, reduces fraud exposure, and ensures adherence to global regulatory standards such as AML, Basel III, and GDPR.",
+    description: "AI-powered document processing for banks and financialinstitutions.",
+    images: [],
+  },
+  {
+    id: "data-orchestration",
+    title: "Data Orchestration",
+    industryId: "Manufacturing & Energy",
+    status: "completed",
+    path: "/data-orchestration",
+    gifUrl: "https://demos-cloudthat.s3.ap-south-1.amazonaws.com/Data%20Orchestration/industry_3_75875277.gif",
+    youtubeUrl: "https://youtu.be/763xGYddnWk",
+    techStack: ["NLP", "OCR", "CHATBOT"],
+    marketingHeadline: "Reduce Downtime with Instant Access",
+    demoOverview: "Improves plant and field operations by giving teams instant access to SOPs, compliance data, and troubleshooting guides, reducing downtime and enhancing operational safety.",
+    problemStatement: "Manufacturing and energy teams face inefficiencies in locating safety manuals, process documents, and compliance guidelines, leading to delays in operations and audits.",
+    solution: "Data Orchestration digitizes and centralizes documentation, making them searchable and accessible via chat or voice, improving safety compliance, maintenance workflows, and decision-making speed.",
+    description: "Enterprise knowledge management — orchestrate pipelines, enrich data, and surface insights.",
+    images: [],
+  },
 ];
 
 export default function Dashboard() {
@@ -64,6 +78,16 @@ export default function Dashboard() {
 
   const [selectedCategories, setSelectedCategories] = useState(["all"]);
   const [sidebarOpen, setSidebarOpen] = useState(false);
+  const [projects, setProjects] = useState(PROJECTS);
+
+  useEffect(() => {
+    const apiUrl = import.meta.env.VITE_AZURE_API_URL;
+    if (!apiUrl) return;
+    fetch(`${apiUrl}/projects`)
+      .then((r) => r.json())
+      .then((data) => { if (Array.isArray(data) && data.length) setProjects(data); })
+      .catch(() => {}); // silently fall back to static PROJECTS
+  }, []);
 
   const handleCategoryToggle = useCallback((categoryId) => {
     setSelectedCategories((prev) => {
@@ -78,7 +102,7 @@ export default function Dashboard() {
   }, []);
 
   const filteredProjects = useMemo(() => {
-    return PROJECTS.filter((project) => {
+    return projects.filter((project) => {
       const categoryMatch =
         selectedCategories.includes("all") ||
         selectedCategories.includes(project.industryId);
@@ -98,7 +122,7 @@ export default function Dashboard() {
 
       return categoryMatch && searchMatch;
     });
-  }, [selectedCategories, searchTerm]);
+  }, [selectedCategories, searchTerm, projects]);
 
   const renderProjectCard = (project) => {
     const isCompleted = project.status?.toLowerCase() === "completed";
@@ -109,6 +133,16 @@ export default function Dashboard() {
       navigate(`/project-details/${encodeURIComponent(project.title)}`, {
         state: { projectDetail: project.title },
       });
+    };
+
+    const handleTryIt = (e) => {
+      e.stopPropagation();
+      if (!isCompleted || !project.path) return;
+      if (project.path.startsWith("http")) {
+        window.open(project.path, "_blank", "noopener,noreferrer");
+      } else {
+        navigate(project.path);
+      }
     };
 
     return (
@@ -157,7 +191,7 @@ export default function Dashboard() {
                 </>
               )}
 
-              <div className="text-center mt-auto pb-2">
+              <div className="text-center mt-auto pb-2 flex gap-2 justify-center">
                 <button
                   className={`relative px-4 py-2 rounded-md text-xs shadow-lg transition-all duration-300 ease-out transform overflow-hidden ${
                     isCompleted
@@ -171,6 +205,7 @@ export default function Dashboard() {
                     {isCompleted ? "KNOW MORE" : "COMING SOON"}
                   </span>
                 </button>
+               
               </div>
             </div>
           </div>
@@ -249,7 +284,7 @@ export default function Dashboard() {
       >
         <div className="grid grid-cols-12 gap-4 sm:gap-6 md:gap-8 lg:gap-9 my-5 mx-4 sm:mx-6 md:mx-8 lg:mx-3 pt-4 lg:pt-0">
           {filteredProjects.map((project) => renderProjectCard(project))}
-          <AddProjectPlaceholder />
+          
 
           {filteredProjects.length === 0 && !searchTerm && (
             <div className="col-span-12 text-center py-10">

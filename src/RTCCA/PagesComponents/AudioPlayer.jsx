@@ -33,7 +33,7 @@ const AudioPlayer = ({
         end: endTime,
         object_key: audio?.source?.split('/').pop().split('.')[0],
       };
-      const url = 'https://ii9tsmueg8.execute-api.ap-south-1.amazonaws.com/dev/get-sentiment';
+      const url = import.meta.env.VITE_RTCCA_API_URL + '/get-sentiment';
       const response = await fetchData(payload, url);
       if (response && response.statusCode === 200) {
         const data = {
@@ -58,7 +58,7 @@ const AudioPlayer = ({
         end: endTime,
         object_key: audio?.source?.split('/').pop().split('.')[0],
       };
-      const url = 'https://ii9tsmueg8.execute-api.ap-south-1.amazonaws.com/dev/get-recommendation';
+      const url = import.meta.env.VITE_RTCCA_API_URL + '/get-recommendation';
       const response = await fetchData(payload, url);
       if (response && response?.statusCode === 200) {
         const data = [
@@ -86,7 +86,7 @@ const AudioPlayer = ({
         keynote: previousKeynotes.join(' '), // Concatenate all previous keynotes
       };
 
-      const url = 'https://ii9tsmueg8.execute-api.ap-south-1.amazonaws.com/dev/get-keynote';
+      const url = import.meta.env.VITE_RTCCA_API_URL + '/get-keynote';
       const response = await fetchData(payload, url);
 
       if (response && response?.statusCode === 200) {
@@ -178,7 +178,7 @@ const AudioPlayer = ({
       const payload = {
         keynote: previousKeynotes.join(' '), // Only keynote, no time parameters
       };
-      const url = 'https://ii9tsmueg8.execute-api.ap-south-1.amazonaws.com/dev/get-recommendation-with-keynote';
+      const url = import.meta.env.VITE_RTCCA_API_URL + '/get-recommendation-with-keynote';
       const response = await fetchData(payload, url);
       if (response && response?.statusCode === 200) {
         const recommendationData = {

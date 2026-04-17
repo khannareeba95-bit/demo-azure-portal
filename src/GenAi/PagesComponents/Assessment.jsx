@@ -48,8 +48,8 @@ export const Assessment = ({
 
       const url =
         selectedOption?.value === "math"
-          ? "https://dirts2is1b.execute-api.us-west-2.amazonaws.com/dev/mathematics-cloudthat-demos"
-          : "https://nfbzmob411.execute-api.ap-south-1.amazonaws.com/v1/MCQ";
+          ? import.meta.env.VITE_GENAI_MATH_MCQ_URL
+          : import.meta.env.VITE_GENAI_MCQ_URL;
 
       const response = await fetchData(payload, url);
 

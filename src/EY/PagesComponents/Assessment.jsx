@@ -27,7 +27,7 @@ export const Assessment = ({ selectedVideo, statusOfInstance }) => {
         source: "ey",
       };
       const url =
-        "https://nfbzmob411.execute-api.ap-south-1.amazonaws.com/v1/MCQ";
+        import.meta.env.VITE_EY_MCQ_URL;
       // "https://ao9cdug7dd.execute-api.ap-south-1.amazonaws.com/dev/";
 
       response = await fetchData(payload, url);

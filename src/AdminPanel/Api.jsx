@@ -1,4 +1,5 @@
-const API_BASE_URL = "https://jj5k0vv913.execute-api.ap-south-1.amazonaws.com/prod";
+import { ENDPOINTS } from "../config/endpoints";
+const API_BASE_URL = ENDPOINTS.ADMIN_API;
 
 export const fetchData = async () => {
   try {

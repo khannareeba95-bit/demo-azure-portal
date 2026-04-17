@@ -29,7 +29,7 @@ export const fetchDashboardProjects = async () => {
 
     if (response.ok) {
       const result = await response.json();
-      return result.projects || [];
+      return Array.isArray(result) ? result : result.projects || [];
     }
 
     console.warn("Azure API responded with:", response.status);

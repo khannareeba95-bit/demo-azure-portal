@@ -428,7 +428,7 @@ function Dashboard() {
         folderID: currentFolderID,
         jd_names_list: selectedJDs,
       };
-      const Url = await fetch("https://cnp4204jii.execute-api.ap-south-1.amazonaws.com/dev/bulk-resume-upload", {
+      const Url = await fetch(import.meta.env.VITE_INTERVIEW_API_URL + '/bulk-resume-upload', {
         method: "POST",
         headers: getHeaders(),
         body: JSON.stringify(payload),
@@ -528,7 +528,7 @@ function Dashboard() {
         folderID: currentFolderID,
         jd_names_list: selectedJDs,
       };
-      const res = await fetch("https://cnp4204jii.execute-api.ap-south-1.amazonaws.com/dev/bulk-resume-upload", {
+      const res = await fetch(import.meta.env.VITE_INTERVIEW_API_URL + '/bulk-resume-upload', {
         method: "POST",
         headers: getHeaders(),
         body: JSON.stringify(payload),

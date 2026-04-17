@@ -68,9 +68,7 @@ export const ChatBot = ({ selectedVideo, statusOfInstance }) => {
         };
         setMessages((prevMessages) => [...prevMessages, newBotResponse]);
 
-        const url = 'https://tyfqdb1le2.execute-api.ap-south-1.amazonaws.com/dev/qna';
-        //cloudattack acc api
-        // "https://v0jjxw3ivi.execute-api.ap-south-1.amazonaws.com/dev/qna";
+        const url = import.meta.env.VITE_RESUME_QNA_URL;
         response = await fetchData(payload, url);
 
         if (response && response.statusCode === 200 && response.Output) {

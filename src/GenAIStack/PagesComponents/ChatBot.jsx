@@ -40,8 +40,7 @@ export const ChatBot = ({ selectedVideo, statusOfInstance }) => {
         user_prompt: inputMessage,
         source: "hpe",
       };
-      const url =
-        "https://nfbzmob411.execute-api.ap-south-1.amazonaws.com/v1/QnA";
+      const url = import.meta.env.VITE_GENAI_QNA_URL;
       const response = await fetchData(payload, url);
 
       setMessages((prev) =>

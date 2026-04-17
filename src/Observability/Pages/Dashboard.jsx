@@ -27,7 +27,7 @@ export const Observability = () => {
     try {
       setError("");
       let url =
-        "https://3hf1opamna.execute-api.ap-south-1.amazonaws.com/Dev/GetStatus";
+        import.meta.env.VITE_OBSERVABILITY_API_URL;
       fetch(url, {
         method: "GET",
         headers: {

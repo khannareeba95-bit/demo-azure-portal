@@ -31,8 +31,7 @@ export const Assessment = ({ selectedVideo, statusOfInstance }) => {
         source: "hpe",
       };
 
-      const url =
-        "https://nfbzmob411.execute-api.ap-south-1.amazonaws.com/v1/MCQ";
+      const url = import.meta.env.VITE_GENAI_MCQ_URL;
 
       const response = await fetchData(payload, url);
 

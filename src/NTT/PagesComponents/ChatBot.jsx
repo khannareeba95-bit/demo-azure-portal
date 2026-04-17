@@ -47,7 +47,7 @@ export const ChatBot = ({
         setMessages((prevMessages) => [...prevMessages, newBotResponse]);
 
         const url =
-          "https://axkxmeog6d.execute-api.ap-south-1.amazonaws.com/dev/qna";
+          import.meta.env.VITE_NTT_QNA_URL;
         // "https://ji5x16rpzj.execute-api.ap-south-1.amazonaws.com/dev/qna";
         response = await fetchData(payload, url);
         if (response && response?.statusCode === 200) {

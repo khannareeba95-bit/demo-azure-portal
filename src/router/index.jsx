@@ -3,7 +3,10 @@ import { useRoutes } from "react-router-dom";
 import { ContentGenerate } from "../AIContentVideoGenerator/Main";
 
 import AdminPanel from "../AdminPanel/Main";
+import AdminDataView from "../AdminPanel/AdminDataView";
+import ProjectsAdmin from "../AdminPanel/ProjectsAdmin";
 import ArogyaMitra from "../ArogyaMitra/Pages/Dashboard";
+import DataOrchestration from "../DataOrchestration/Dashboard";
 import UserContext from "../Context/UserContext";
 import { EY } from "../EY/Pages/Dashboard";
 import { Fintech } from "../Fintech/Pages/Dashboard";
@@ -55,6 +58,26 @@ function Router() {
         {
           path: "/intellidoc",
           element: <OCR />,
+        },
+        {
+          path: "/data-orchestration",
+          element: <DataOrchestration />,
+        },
+        {
+          path: "/admin/data",
+          element: (
+            <AdminRoute>
+              <AdminDataView />
+            </AdminRoute>
+          ),
+        },
+        {
+          path: "/admin/projects",
+          element: (
+            <AdminRoute>
+              <ProjectsAdmin />
+            </AdminRoute>
+          ),
         },
         {
           path: "/vocal",

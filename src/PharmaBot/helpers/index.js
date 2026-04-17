@@ -2,8 +2,8 @@ export const capitalizeWord = (inputText) => {
     return inputText.split("_").map(word => word.slice(0, 1).toUpperCase() + word.slice(1)).join(" ")
 }
 
-export const baseURL = "https://5gp21pm1sa.execute-api.ap-south-1.amazonaws.com/demo/chatbot";
-// https://5gp21pm1sa.execute-api.ap-south-1.amazonaws.com/demo/chatbot
+import { ENDPOINTS } from "../../config/endpoints";
+export const baseURL = ENDPOINTS.PHARMA_CHATBOT;
 export const handleQueryMessage = async (queryBody, messages, setMessages) => {
 
 

@@ -29,7 +29,7 @@ function DoctorDashboard() {
     }
 
     // Fetch the data from the API
-    fetch("https://nl1wxwxyjh.execute-api.ap-south-1.amazonaws.com/dev/", {
+    fetch(import.meta.env.VITE_AROGYA_API_URL, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

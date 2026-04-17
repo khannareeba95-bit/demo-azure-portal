@@ -152,17 +152,14 @@ const Navbar = ({ inputRef, setMenuSelection, setQuery }) => {
   };
 
   async function getStatus() {
-    let response = await fetch("https://5gp21pm1sa.execute-api.ap-south-1.amazonaws.com/demo/FAQ", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ "rds_action": "status" }),
+    let response = await fetch(import.meta.env.VITE_PHARMA_FAQ_URL, {
     });
     return response.json();
   }
 
   async function stopInstance() {
     try {
-      const response = await fetch("https://5gp21pm1sa.execute-api.ap-south-1.amazonaws.com/demo/FAQ", {
+      const response = await fetch(import.meta.env.VITE_PHARMA_FAQ_URL, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ "rds_action": "stop" }),
@@ -175,7 +172,7 @@ const Navbar = ({ inputRef, setMenuSelection, setQuery }) => {
 
   async function startInstance() {
     try {
-      const response = await fetch("https://5gp21pm1sa.execute-api.ap-south-1.amazonaws.com/demo/FAQ", {
+      const response = await fetch(import.meta.env.VITE_PHARMA_FAQ_URL, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ "rds_action": "start" }),
@@ -226,7 +223,7 @@ const Navbar = ({ inputRef, setMenuSelection, setQuery }) => {
     }
     try {
       // setLoading(true);
-      let response = await fetch("https://5gp21pm1sa.execute-api.ap-south-1.amazonaws.com/demo/FAQ", {
+      let response = await fetch(import.meta.env.VITE_PHARMA_FAQ_URL, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

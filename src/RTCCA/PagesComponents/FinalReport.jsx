@@ -21,7 +21,7 @@ export const FinalReport = ({ selectedAudio, audioTitle, audio, recommendedSolut
         object_key: audio?.source?.split("/").pop().split(".")[0],
       };
       const url =
-        "https://ii9tsmueg8.execute-api.ap-south-1.amazonaws.com/dev/get-report";
+        import.meta.env.VITE_RTCCA_API_URL + '/get-report';
       //cloudattack acc api url
       // const url =
       //   "https://a3vvzrxzl7.execute-api.ap-south-1.amazonaws.com/dev/get-report";
@@ -52,7 +52,7 @@ export const FinalReport = ({ selectedAudio, audioTitle, audio, recommendedSolut
         "method": "get_student_details"
       };
       const url =
-        "https://ii9tsmueg8.execute-api.ap-south-1.amazonaws.com/dev/get-report";
+        import.meta.env.VITE_RTCCA_API_URL + '/get-report';
       //cloudattack acc api url
       // const url =
       //   "https://a3vvzrxzl7.execute-api.ap-south-1.amazonaws.com/dev/get-report";

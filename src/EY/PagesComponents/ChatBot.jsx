@@ -48,7 +48,7 @@ export const ChatBot = ({ selectedVideo, statusOfInstance }) => {
         setMessages((prevMessages) => [...prevMessages, newBotResponse]);
 
         const url =
-          "https://nfbzmob411.execute-api.ap-south-1.amazonaws.com/v1/QnA";
+          import.meta.env.VITE_EY_QNA_URL;
         // "https://v0jjxw3ivi.execute-api.ap-south-1.amazonaws.com/dev/qna";
         response = await fetchData(payload, url);
         if (response && response.statusCode === 200) {

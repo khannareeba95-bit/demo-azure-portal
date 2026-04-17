@@ -51,8 +51,8 @@ const CrediqProcessing = ({
 
     const apiEndpoint =
       selectedOption === "invoice" || selectedOption === "ocr_all_documents"
-        ? "https://bj3n1ia0m6.execute-api.ap-south-1.amazonaws.com/dev/invoice"
-        : "https://bj3n1ia0m6.execute-api.ap-south-1.amazonaws.com/demo/dev_env";
+        ? import.meta.env.VITE_OCR_INVOICE_API_URL
+        : import.meta.env.VITE_OCR_API_URL;
 
     try {
       const response = await fetch(apiEndpoint, {

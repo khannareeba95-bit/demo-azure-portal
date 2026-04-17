@@ -84,8 +84,7 @@ export const Summary = ({
           };
         }
       }
-      const url =
-        "https://e9mm7a5z2g.execute-api.ap-south-1.amazonaws.com/dev/summarization";
+      const url = import.meta.env.VITE_JAM_SUMMARY_URL;
       const response = await fetchData(payload, url);
 
       if (!response || response?.statusCode !== 200 || !response?.summary) {

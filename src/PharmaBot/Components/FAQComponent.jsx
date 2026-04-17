@@ -10,7 +10,7 @@ const FAQComponent = ({ inputRef, setFAQToggle, setQuery }) => {
         (async () => {
             try {
                 setLoading(true);
-                let response = await fetch("https://5gp21pm1sa.execute-api.ap-south-1.amazonaws.com/demo/FAQ",{
+                let response = await fetch(import.meta.env.VITE_PHARMA_FAQ_URL,{
                     method:"POST"
                 });
                 let data = await response.json();

@@ -1,6 +1,6 @@
-const API_URL = "https://bj3n1ia0m6.execute-api.ap-south-1.amazonaws.com/demo";
-const INVOICE_API_URL =
-  "https://bj3n1ia0m6.execute-api.ap-south-1.amazonaws.com/dev/invoice";
+import { ENDPOINTS } from "../../config/endpoints";
+const API_URL = ENDPOINTS.OCR_API;
+const INVOICE_API_URL = ENDPOINTS.OCR_INVOICE_API;
 
 export const fetchFilePresignedUrl = async (fileName) => {
   const url = `${API_URL}/bedrock_ocr`;

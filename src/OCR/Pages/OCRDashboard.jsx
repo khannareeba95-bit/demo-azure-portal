@@ -123,7 +123,7 @@ function OCR() {
       method: "put_object_presigned_url",
     };
     // const url = "https://1d7vkwqmoi.execute-api.ap-south-1.amazonaws.com/dev";
-    const url = "https://v1lt5g08mb.execute-api.ap-south-1.amazonaws.com/dev";
+    const url = import.meta.env.VITE_OCR_API_URL;
     // cloudattack acc api url
     const response = await fetchData(payload, url);
 
@@ -155,9 +155,7 @@ function OCR() {
       };
       try {
         const response = await fetch(
-          "https://67h9czr42i.execute-api.ap-south-1.amazonaws.com/ocr_aws_dev/",
-          // "https://dy1gpwshph.execute-api.ap-south-1.amazonaws.com/ocr_aws_dev/",
-          // cloudattack acc api url
+          import.meta.env.VITE_OCR_INVOICE_API_URL,
           {
             method: "POST",
             body: JSON.stringify(payload),
@@ -173,10 +171,8 @@ function OCR() {
             key: textFile,
             method: "get_object_presigned_url",
           };
-          const url =
-            "https://v1lt5g08mb.execute-api.ap-south-1.amazonaws.com/dev/";
+          const url = import.meta.env.VITE_OCR_API_URL;
           // "https://1d7vkwqmoi.execute-api.ap-south-1.amazonaws.com/dev";
-          // cloudattack acc api url
           const getPreurl = await fetchData(payload, url);
           if (getPreurl) {
             const promise = fetch(getPreurl)

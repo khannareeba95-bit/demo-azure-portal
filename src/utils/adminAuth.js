@@ -1,15 +1,8 @@
 // Admin email addresses that have access to admin panel
 const ADMIN_EMAILS = [
-  "huda.k@cloudthat.com",
-  "prarthit@cloudthat.com",
-  "shantanu@cloudthat.com",
-  "arihant@cloudthat.com",
-  "sneha.n@cloudthat.com",
-  "aditya.k@cloudthat.com",
-  "charanya@cloudthat.com",
-  "aayush@cloudthat.com",
-  "chaithra.s@cloudthat.com",
-  "mayurp@cloudthat.com",
+  
+   "areeba@cloudthat.com",
+
 ];
 
 export const isAdmin = (email) => {
@@ -25,9 +18,11 @@ export const checkAdminAccess = (userDetails) => {
   return result;
 };
 
+import { ENDPOINTS } from "../config/endpoints";
+
 export const isAdminAccess = async (email, setIsAdmin) => {
   try {
-    const apiEndpoint = "https://cnp4204jii.execute-api.ap-south-1.amazonaws.com/dev/get_jd_data";
+    const apiEndpoint = `${ENDPOINTS.INTERVIEW_API}/get_jd_data`;
     const payload = {
       method: "check_admin_status",
       email: email,

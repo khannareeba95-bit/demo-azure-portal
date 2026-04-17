@@ -105,9 +105,9 @@ export const Summary = ({
 
   const buildApiUrl = (optionValue) => {
     if (optionValue === "math") {
-      return "https://dirts2is1b.execute-api.us-west-2.amazonaws.com/dev/mathematics-cloudthat-demos";
+      return import.meta.env.VITE_GENAI_MATH_SUMMARY_URL;
     }
-    return "https://nfbzmob411.execute-api.ap-south-1.amazonaws.com/v1/summarisation";
+    return import.meta.env.VITE_GENAI_SUMMARY_URL;
   };
 
   const handleError = (response) => {

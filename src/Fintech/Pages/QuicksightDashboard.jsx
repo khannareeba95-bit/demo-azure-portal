@@ -27,7 +27,7 @@ export const QuickSightDashboard = () => {
       redirect: "follow",
     };
     try {
-      const response = await fetch("https://8li6jbeee8.execute-api.ap-south-1.amazonaws.com/dev/", requestOptions);
+      const response = await fetch(import.meta.env.VITE_QUICKSIGHT_API_URL, requestOptions);
       const data = await response.json();
       //   return data?.body;
       const embedUrl = data?.body; // Assuming the server returns an object with 'embedUrl' property
@@ -56,7 +56,7 @@ export const QuickSightDashboard = () => {
       redirect: "follow",
     };
     try {
-      const response = await fetch("https://8li6jbeee8.execute-api.ap-south-1.amazonaws.com/dev/", requestOptions);
+      const response = await fetch(import.meta.env.VITE_QUICKSIGHT_API_URL, requestOptions);
       const data = await response.json();
       //   return data?.body;
       const embedUrl = data?.body; // Assuming the server returns an object with 'embedUrl' property

@@ -33,8 +33,7 @@ export const Summary = ({ statusOfInstance, selectedVideo, type }) => {
       ...(type === "doc" && { source: "documents_resume" }),
     };
 
-    const url =
-      "https://bbkntblet9.execute-api.ap-south-1.amazonaws.com/devvv/ntt";
+    const url = import.meta.env.VITE_RESUME_SUMMARY_URL;
 
     try {
       const response = await fetchData(payload, url);

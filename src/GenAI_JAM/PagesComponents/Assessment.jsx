@@ -39,8 +39,7 @@ export const Assessment = ({ selectedVideo, statusOfInstance, type }) => {
         };
       }
 
-      const url =
-        "https://j24m9na7zc.execute-api.ap-south-1.amazonaws.com/dev/";
+      const url = import.meta.env.VITE_JAM_ASSESSMENT_URL;
       // "https://ao9cdug7dd.execute-api.ap-south-1.amazonaws.com/dev/";
 
       response = await fetchData(payload, url);

@@ -31,7 +31,7 @@ export const Assessment = ({
         source: "ntt",
       };
       const url =
-        "https://axkxmeog6d.execute-api.ap-south-1.amazonaws.com/dev/mcq";
+        import.meta.env.VITE_NTT_MCQ_URL;
       // "https://ji5x16rpzj.execute-api.ap-south-1.amazonaws.com/dev/mcq";
       response = await fetchData(payload, url);
       if (response && response?.statusCode === 200) {

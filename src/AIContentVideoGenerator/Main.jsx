@@ -30,7 +30,7 @@ export const ContentGenerate = () => {
     try {
       setError(null);
       setLoading(true);
-      const url = "https://8ywq6tj5nh.execute-api.ap-south-1.amazonaws.com/dev/";
+      const url = import.meta.env.VITE_VIDEO_GEN_API_URL;
       const payload = {
         user_email: userDetails?.attributes?.email,
         action: "get_user_data",
@@ -111,7 +111,7 @@ export const ContentGenerate = () => {
         seed_value: seed,
         user_email: userDetails?.attributes?.email,
       };
-      const url = "https://8ywq6tj5nh.execute-api.ap-south-1.amazonaws.com/dev/";
+      const url = import.meta.env.VITE_VIDEO_GEN_API_URL;
       const response = await fetchData(payload, url);
       if (response?.statusCode !== 200) {
         const errorMessage = response?.error?.content ?? "Failed to generate video";
@@ -194,7 +194,7 @@ export const ContentGenerate = () => {
     try {
       setError(null);
       setLoading(true);
-      const url = "https://8ywq6tj5nh.execute-api.ap-south-1.amazonaws.com/dev/merge_video";
+      const url = import.meta.env.VITE_VIDEO_GEN_API_URL + '/merge_video';
       const payload = {
         user_email: userDetails?.attributes?.email,
         action: "merge_video",

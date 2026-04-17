@@ -65,8 +65,7 @@ export const Summary = ({ statusOfInstance, selectedVideo }) => {
         transcript: video?.transcriptJson,
         source: "hpe",
       };
-      const url =
-        "https://nfbzmob411.execute-api.ap-south-1.amazonaws.com/v1/summarisation";
+      const url = import.meta.env.VITE_GENAI_SUMMARY_URL;
       const response = await fetchData(payload, url);
 
       if (!response || response?.statusCode !== 200 || !response?.summary) {

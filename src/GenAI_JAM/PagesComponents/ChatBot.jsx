@@ -72,8 +72,7 @@ export const ChatBot = ({
     setMessages((prevMessages) => [...prevMessages, newBotResponse]);
 
     try {
-      const url =
-        "https://e9mm7a5z2g.execute-api.ap-south-1.amazonaws.com/dev/QnA";
+      const url = import.meta.env.VITE_JAM_QNA_URL;
       const response = await fetchData(payload, url);
 
       newBotResponse.message =

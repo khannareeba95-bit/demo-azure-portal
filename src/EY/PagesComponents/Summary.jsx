@@ -36,7 +36,7 @@ export const Summary = ({ statusOfInstance, selectedVideo }) => {
         };
 
         const url =
-          " https://nfbzmob411.execute-api.ap-south-1.amazonaws.com/v1/summarisation";
+          import.meta.env.VITE_EY_SUMMARY_URL;
         // "https://nr2fef150c.execute-api.ap-south-1.amazonaws.com/devvv/ntt";
         response = await fetchData(payload, url);
         if (response && response?.statusCode === 200) {

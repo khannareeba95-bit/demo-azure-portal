@@ -220,12 +220,7 @@ function Main() {
                         Login with CloudThat
                       </button>
 
-                      <button
-                        className="btn btn-primary py-3 px-4 w-full xl:mr-3 align-top mb-3"
-                        onClick={handleLoginWithOthers}
-                      >
-                        Login with Amazon
-                      </button>
+                      
                     </>
                   )}
                 </div>

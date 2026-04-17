@@ -52,9 +52,7 @@ export const ChatBot = ({ selectedVideo, statusOfInstance, selectedOption }) => 
         };
         setMessages((prevMessages) => [...prevMessages, newBotResponse]);
 
-        const url = 'https://nfbzmob411.execute-api.ap-south-1.amazonaws.com/v1/QnA';
-        //cloudatack acc api url
-        //  "https://yuwyhvovf1.execute-api.ap-south-1.amazonaws.com/v1/QnA";
+        const url = import.meta.env.VITE_GENAI_QNA_URL;
         response = await fetchData(payload, url);
         if (response && response.statusCode === 200) {
           newBotResponse.message = response?.Output;

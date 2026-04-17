@@ -1,4 +1,5 @@
-const API_URL = "https://cnp4204jii.execute-api.ap-south-1.amazonaws.com/dev";
+import { ENDPOINTS } from "../../config/endpoints";
+const API_URL = ENDPOINTS.INTERVIEW_API;
 
 const API_TOKEN = "cs7ohgS17H7WROp1tm1Gp8QeURQnQgLS2xVsGij5";
 

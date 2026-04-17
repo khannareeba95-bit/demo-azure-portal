@@ -44,7 +44,7 @@ export const Summary = ({
         };
         const url =
           "https://bbkntblet9.execute-api.ap-south-1.amazonaws.com/devvv/ntt";
-        // "https://nr2fef150c.execute-api.ap-south-1.amazonaws.com/devvv/ntt";
+        // import.meta.env.VITE_NTT_SUMMARY_URL
         response = await fetchData(payload, url);
         if (response && response?.statusCode === 200) {
           setFullsummary(response);
@@ -81,7 +81,7 @@ export const Summary = ({
 
         const url =
           "https://axkxmeog6d.execute-api.ap-south-1.amazonaws.com/dev/ntt-bedrock-summarize";
-        // "https://ji5x16rpzj.execute-api.ap-south-1.amazonaws.com/dev/ntt-bedrock-summarize";
+        // import.meta.env.VITE_NTT_BEDROCK_SUMMARY_URL
         response = await fetchData(payload, url);
         if (response && response?.statusCode === 200) {
           setChapterSummary(response);
